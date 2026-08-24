@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Personal Finance</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+
+    <!-- AUTH SCREEN -->
+    <section id="authScreen" class="auth">
+      <div class="auth-card">
+        <div class="auth-logo">💰</div>
+        <h1>Personal Finance</h1>
+        <p class="auth-sub">Catat uang masuk, uang keluar, budget, dan saldo akun dalam satu aplikasi.</p>
+
+        <form id="loginForm" class="auth-form">
+          <input id="email" type="email" placeholder="Email kamu" autocomplete="email" />
+          <button class="btn primary full" type="submit">Kirim Link Login</button>
+        </form>
+
+        <button id="demoBtn" class="btn ghost full" type="button">Coba Mode Demo</button>
+
+        <p class="auth-note">
+          Jika Supabase sudah dikonfigurasi, login memakai magic link Supabase.
+          Jika belum, gunakan mode demo.
+        </p>
+      </div>
+    </section>
+
+    <!-- MAIN APP -->
+    <section id="appScreen" class="app-screen hidden">
+      <header class="topbar">
+        <button id="backBtn" class="back hidden" type="button">←</button>
+
+        <div class="topbar-info">
+          <h1 id="pageTitle">Dashboard</h1>
+          <p id="userSub" class="user-sub">Personal Finance</p>
+        </div>
+
+        <div id="userAvatar" class="avatar">U</div>
+      </header>
+
+      <main id="mainContent" class="main"></main>
+
+      <button id="fab" class="fab" type="button" aria-label="Tambah transaksi">+</button>
+
+      <nav class="bottom-nav">
+        <button class="nav-item active" data-page="dashboard" type="button">
+          <span class="nav-icon">🏠</span>
+          <span>Beranda</span>
+        </button>
+
+        <button class="nav-item" data-page="transactions" type="button">
+          <span class="nav-icon">💸</span>
+          <span>Transaksi</span>
+        </button>
+
+        <button class="nav-item" data-page="budget" type="button">
+          <span class="nav-icon">🎯</span>
+          <span>Budget</span>
+        </button>
+
+        <button class="nav-item" data-page="reports" type="button">
+          <span class="nav-icon">📊</span>
+          <span>Laporan</span>
+        </button>
+
+        <button class="nav-item" data-page="menu" type="button">
+          <span class="nav-icon">🔍</span>
+          <span>Menu</span>
+        </button>
+      </nav>
+    </section>
+  </div>
+
+  <!-- BOTTOM SHEET -->
+  <div id="sheetOverlay" class="sheet-overlay hidden">
+    <div class="sheet">
+      <div class="sheet-header">
+        <h2 id="sheetTitle">Form</h2>
+        <button id="sheetClose" class="back" type="button">✕</button>
+      </div>
+      <div id="sheetBody" class="sheet-body"></div>
+    </div>
+  </div>
+
+  <div id="toast"></div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
