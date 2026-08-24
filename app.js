@@ -5,8 +5,8 @@ import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js
    Ganti dua nilai ini setelah project Supabase dibuat.
    Jika dikosongkan, aplikasi berjalan dalam mode demo.
 ===================================================== */
-const SUPABASE_URL = 'PASTE_SUPABASE_URL';
-const SUPABASE_ANON_KEY = 'PASTE_SUPABASE_ANON_KEY';
+const SUPABASE_URL = 'https://bcijrdopsfoqhiztopnc.supabase.co/rest/v1/';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJjaWpyZG9wc2ZvcWhpenRvcG5jIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc4NjMyMTAzNCwiZXhwIjoyMTAxODk3MDM0fQ.itiWQARbH32EnlOOHSrO-MsauL-JGzPyvZc_is-qQHM';
 
 const hasSupabase =
   SUPABASE_URL &&
